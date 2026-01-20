@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone,Mail,Instagram,Youtube,Facebook,Twitter } from 'lucide-react';
+import { Phone,Mail,Instagram,Youtube,Facebook,Twitter,ChevronDown,User, Search, ShoppingCart, Heart } from 'lucide-react';
+
 
 export default function Header(){
     return (
@@ -51,9 +52,10 @@ export default function Header(){
 
      <div className="flex justify-between items-center ml-[265px] mr-[24px] h-[58px] w-[1155px]">
         <div>
-    <nav>
-        <a href ="/">Home</a>
-        <a href="/shop">Shop</a>
+    <nav className="flex items-center gap-[15px] font-['Montserrat'] font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#252B42]">
+        <a href ="/" >Home</a>
+        <a href="/shop" className="font-medium">Shop</a>
+        <ChevronDown size={14} className="text-[#252B42]" />
         <a href="/about">About</a>
         <a href ="/blog">Blog</a>
         <a href ="/contact">Contact</a>
@@ -61,8 +63,30 @@ export default function Header(){
     </nav>
      </div>
 
-    <div>
-        <span>Login/Register</span>
+    <div className="flex items-center font-['Montserrat'] text-[#23A6F0]">
+        <div className="flex items-center cursor-pointer w-[166px] h-[54px] gap-[5px] p-[15px] rounded-[37px]">
+        <User size ={12}/>
+        <span className="font-bold text-[14px] leading-[24px] tracking-[0.2px]">Login/Register</span>
+        </div>
+
+        <div className="flex items-center p-[15px] gap-[5px] rounded-[37px]">
+
+         <div className="cursor-pointer hover:opacity-80 ">
+            <Search size={16}/>
+         </div>
+
+         <div className="flex items-center p-[15px] cursor-pointer hover:opacity-80">
+          <ShoppingCart size={16} />
+           <span className="ml-[5px] text-[12px] font-normal">1</span>
+         </div>
+
+         <div className="flex items-center p-[15px] cursor-pointer hover:opacity-80">
+         <Heart size={16} />
+         <span className="ml-[5px] text-[12px] font-normal">1</span>
+         </div>
+
+        </div>
+
     </div>
 
    </div>
