@@ -17,15 +17,16 @@ import neuralImage from '../assets/5f8ce73d1a41b674cbd12f927c7ea9a6ca0ce76c.png'
 import postImage1 from '../assets/679b3cdf17b8ec542ce1c452944dfb51f10ba010.jpg';
 import postImage2 from '../assets/412d5bc5d51defa7e9522a5eb5f534d0442131b2.jpg';
 import postImage3 from '../assets/af91645f60a447510f7b4e8aa158f122b0d1fe29.jpg';
-
-
+import postImage4 from '../assets/6fa1d42dda5f231255f5a899906c50f4f3638388.jpg';
+import postImage5 from '../assets/3f46bc27bfdeda7c44028b59453c136c10512828.jpg';
+import postImage6 from '../assets/6e5a1e407b100e0e65dada874a961f311a92cfce.jpg';
 import { Link } from 'react-router-dom';
 
 
-export default function ShopPage(){
-    return (
-        <div className="w-full font-['Montserrat'] min-h-screen overflow-x-hidden">
-           
+
+
+           const Hero = () => {
+            return (
             <section className="relative w-full md:min-h-[716px] h-[600px] flex items-center bg-[#23A6F0] overflow-hidden"> 
            
 
@@ -39,18 +40,18 @@ export default function ShopPage(){
 
 
 
-        <div className="relative z-10 flex flex-col gap-[80px] text-white max-w-[1044px] ml-[197.5px] py-[112px]">
+        <div className="relative z-10 w-full mx-auto px-6 md:px-0 flex flex-col items-center md:items-start text-center md:text-left md:gap-20 gap-10 text-white max-w-[1044px]  md:py-[112px]">
 
-            <div className="flex flex-row py-[48px] gap-[30px] "> 
+            <div className="flex md:flex-row flex-col md:py-[48px] md:gap-[30px] py-8 gap-6 "> 
 
-                <div className="flex flex-col gap-[35px]">
+                <div className="flex flex-col md:gap-[35px] gap-6">
                  <h5 className="font-bold text-[16px] leading-[24px] tracking-[0.1px]  h-[24px]">SUMMER 2020</h5>
-                 <h1 className="font-bold text-[58px] leading-[80px] tracking-[0.2px]  h-[80px]">NEW COLLECTION</h1>
-                 <h4 className="font-normal text-[20px] leading-[30px] tracking-[0.2px] w-[376px] h-[60px]">We know how large objects will act, but things on a small scale.</h4>
-                 <button className="font-bold rounded-[5px] px-[40px] py-[15px]  gap-[10px] bg-[#2DC071] w-fit">SHOP NOW</button>
+                 <h1 className="font-bold md:text-[58px] text-[40px] md:leading-[80px] leading-tight tracking-[0.2px]  md:min-h-[80px]">NEW COLLECTION</h1>
+                 <h4 className="font-normal text-[20px] leading-[30px] tracking-[0.2px] max-w-[376px] md:min-h-[60px]">We know how large objects will act, but things on a small scale.</h4>
+                 <button className="font-bold rounded-[5px] px-[40px] py-[15px]  bg-[#2DC071] w-fit">SHOP NOW</button>
                 </div>
 
-                <div className="flex w-[415px]"> </div>
+                <div className="hidden md:flex w-[415px]"> </div>
 
             </div>
 
@@ -66,379 +67,175 @@ export default function ShopPage(){
 
                 </div>
 
-                <button className="absolute font-normal text-white text-[58px] w-[24px] h-[44.47px] left-[40px] top-[283px] z-20 items-center justify-center"> ❮ </button>
-                <button className="absolute font-normal text-white text-[58px] w-[24px] h-[44.47px] right-[40px] top-[283px] z-20 items-center justify-center"> ❯ </button>
+                <button className="absolute font-normal text-white md:text-[58px] text-[40px] md:left-[40px] left-4 z-20 top-1/2 -translate-y-1/2"> ❮ </button>
+                <button className="absolute font-normal text-white md:text-[58px] text-[40px] md:right-[40px] right-4 z-20 top-1/2 -translate-y-1/2"> ❯ </button>
         
         </section>
+            )
+        }
 
 
 
-
+        const EditorsPick = () => {
+        return (
         <section className="w-full bg-[#FAFAFA] ">
             
-                <div className="max-w-[1050px] mx-auto py-[80px] gap-[48px] flex flex-col items-center px-4">
+                <div className="max-w-[1050px] mx-auto py-10 md:py-[80px] gap-8 md:gap-[48px] flex flex-col items-center px-4">
 
 
 
-            <div className="gap-[10px] max-w-[607px] w-full text-center">
-                <h2 className="font-['Montserrat'] font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#252B42]">EDITOR'S PICK</h2>
-                <p className="font-['Montserrat'] font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">Problems trying to resolve the conflict between</p>
+            <div className="gap-2 max-w-[607px] w-full text-center flex flex-col">
+                <h2 className="font-bold text-[24px] leading-[32px] tracking-[0.1px] text-[#252B42]">EDITOR'S PICK</h2>
+                <p className="font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">Problems trying to resolve the conflict between</p>
             </div>
 
 
 
-            <div className="gap-[30px] flex flex-row max-w-[1050px] w-full">
+            <div className="gap-[30px] flex flex-col md:flex-row  w-full justify-center">
 
 
-                <div className="relative w-[510px] h-[500px] overflow-hidden">
+                <div className="relative w-full md:w-[510px]  h-[500px] overflow-hidden group">
                     <img
                     src={menImage}
                     alt="Men"
                     className="w-full h-full object-cover"
                     />
 
-                <div className="flex absolute left-[31px] top-[426px] w-[170px] h-[48px] bg-white items-center justify-center">
-                    <span className="font-bold text-[16px] tracking-[0.1px] leading-[24px]">MEN</span>
+                <div className="flex absolute left-[31px] bottom-[31px] w-[170px] h-[48px] bg-white items-center justify-center shadow-md">
+                    <span className="font-bold text-[16px] tracking-[0.1px]">MEN</span>
                 </div>
                 </div>
 
-                <div className="relative w-[240px] h-[500px] overflow-hidden">
+                <div className="relative w-full md:w-[240px] h-[500px] overflow-hidden group">
                   <img
                     src={womenImage}
                     alt="Women"
                     className="w-full h-full object-cover"
                     />  
-                <div className="flex absolute left-[21px] top-[434px] w-[136px] h-[48px] bg-white items-center justify-center px-[48px] py-[12px] gap-[10px]">
-                    <span className="font-bold text-[16px] tracking-[0.1px] leading-[24px]">WOMEN</span>
+                <div className="flex absolute left-[21px] bottom-[31px] w-[136px] h-[48px] bg-white items-center justify-center shadow-md">
+                    <span className="font-bold text-[16px] tracking-[0.1px]">WOMEN</span>
                 </div>
                 </div>
 
-                <div className="flex flex-col relative w-[240px] h-[500px] overflow-hidden gap-[16px]">
+                <div className="flex flex-col md:w-[240px] md:h-[500px] w-full gap-[16px]">
 
-                    <div className="relative w-[240px] h-[242px]">
+                    <div className="relative w-full h-[242px] overflow-hidden">
                       <img
                     src={accessoriesImage}
                     alt="Accessories"
                     className="w-full h-full object-cover"
                     />   
-                    <div className="flex absolute left-[14px] top-[171px] w-[170px] h-[48px] bg-white items-center justify-center px-[26px] py-[12px] gap-[10px]">
-                        <span className="font-bold text-[16px] tracking-[0.1px] leading-[24px]">ACCESSORIES</span>
+                    <div className="flex absolute left-[14px] bottom-[23px] w-[170px] h-[48px] bg-white items-center justify-centershadow-sm">
+                        <span className="font-bold text-[16px] tracking-[0.1px]">ACCESSORIES</span>
                     </div>
                     </div>
 
 
-                    <div className="relative w-[240px] h-[242px]">
+                    <div className="relative w-full h-[242px] overflow-hidden">
                         <img
                     src={kidsImage}
                     alt="Kids"
                     className="w-full h-full object-cover"
                     /> 
-                    <div className="flex absolute left-[18px] top-[176px] w-[120px] h-[48px] bg-white items-center justify-center px-[40px] py-[12px] gap-[10px]">
-                        <span className="font-bold text-[16px] tracking-[0.1px] leading-[24px]">KIDS</span>
+                    <div className="flex absolute left-[18px] bottom-[18px] w-[120px] h-[48px] bg-white items-center justify-center shadow-sm">
+                        <span className="font-bold text-[16px] tracking-[0.1px]">KIDS</span>
                     </div>
                     </div>
 
 
                 </div>
-
-
-
             </div>
-
-
-            </div>
-            
+            </div>           
         </section>
 
+        )
+    }
 
-
-
+        const BestsellerProducts = () => {
+          const products=[
+            {id:1, img:bestImage1, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:2, img:bestImage2, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:3, img:bestImage3, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:4, img:bestImage4, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:5, img:bestImage5, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:6, img:bestImage6, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:7, img:bestImage7, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:8, img:bestImage8, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+          ]  
+        return (
         <section className="w-full bg-white ">
-           <div className="max-w-[1124px] mx-auto py-[80px] gap-[80px] flex flex-col items-center px-4"> 
+           <div className="max-w-[1124px] mx-auto py-10 md:py-[80px] md:gap-[80px] gap-10 flex flex-col items-center px-4"> 
               
+        <div className="flex flex-col gap-[10px] max-w-[691px] w-full text-center">
+          <h4 className="font-normal text-[20px] tracking-[0.2px] leading-[30px] text-[#737373]">Featured Products</h4>
+          <h3 className="font-bold text-[24px] tracking-[0.1px] leading-[32px] text-[#252B42]">BESTSELLER PRODUCTS</h3>
+          <p className="font-normal text-[14px] tracking-[0.2px] leading-[20px] text-[#737373]">Problems trying to resolve conflict between</p>
+        </div>
 
-                <div className="flex flex-col gap-[10px] max-w-[691px] w-full text-center font-['Montserrat']">
-                     <h4 className="font-normal text-[20px] tracking-[0.2px] leading-[30px] text-[#737373]">Featured Products</h4>
-                     <h3 className="font-bold text-[24px] tracking-[0.1px] leading-[32px] text-[#252B42]">BESTSELLER PRODUCTS</h3>
-                     <p className="font-normal text-[14px] tracking-[0.2px] leading-[20px] text-[#737373]">Problems tryying to resolve conflict between</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] w-full max-w-[1049px]">
+          {products.map((product) => (
+            <div key={product.id} className="flex flex-col items-center">
+              
+              
+              <div className="w-full md:w-[239px] h-[427px] overflow-hidden">
+                <img
+                  src={product.img}
+                  alt={product.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              
+              <div className="flex flex-col items-center pt-[25px] pb-[35px] px-[25px] gap-[10px] text-center">
+                <h5 className="font-bold text-[16px] text-[#252B42]">{product.title}</h5>
+                <Link to="/shop" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">
+                  {product.dept}
+                </Link>
+                
+                <div className="flex gap-[5px] py-[5px]">
+                  <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">{product.oldPrice}</span>
+                  <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">{product.newPrice}</span>
                 </div>
 
-
-
-                <div className=" flex flex-row max-w-[1049px] mx-auto gap-[30px] overflow-hidden">
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage1}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage2}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage3}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage4}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-                  
+                
+                <div className="flex gap-[6.08px]">
+                  <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
+                  <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
+                  <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
+                  <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
                 </div>
+              </div>
 
-
-
-
-
-            <div className=" flex flex-row max-w-[1049px] mx-auto gap-[30px] overflow-hidden">
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage5}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage6}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage7}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="flex flex-col">
-                        <div className="w-[239px] h-[427px]">
-                        <img
-                        src={bestImage8}
-                        alt="Product"
-                        className="w-full h-full object-cover"
-                        />
-                        </div>
-
-                        <div className="flex flex-col w-[239px] top-[25px] bottom-[35px] px-[25px] gap-[10px]">
-                             <h5 className="font-bold text-[16px] text-[#252B42]">Graphic Design</h5>
-                             <Link to="/shop/english-department" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">English Department</Link>
-                             
-                             <div className="flex gap-[5px] py-[5px] px-[3px]">
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">$16.48</span>
-                             <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#23856D]">$6.48</span>
-                             </div>
-
-                             <div className="flex gap-[6.08px]">
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23A6F0] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#23856D] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#E77C40] cursor-pointer"></div>
-                                <div className="w-[16px] h-[16px] rounded-full bg-[#252B42] cursor-pointer"></div>
-                             </div>
-                        </div>
-                    </div>
-
-
-                  
-                </div>
-
-           
+            </div>
+            ))}
            </div>
-
+         </div>
         </section>
+            )
+        }
 
 
+        const VitaClassic = ()=> {
+            return (
+        <section className="relative  w-full  bg-[#23856D] text-white overflow-hidden ">
 
-        <section className="flex w-full h-[711px] bg-[#23856D] text-white overflow-hidden relative">
+          <div className="max-w-[1440px] mx-auto w-full flex flex-col md:flex-row items-end md:items-center justify-between  md:px-[200px] px-8 pt-16 pb-0 md:py-0">
 
-          <div className="w-[1440px] mx-auto w-full flex flex-col items-center px-[200px]">
+            <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-[509px] gap-[30px] z-10 mb-8 md:mb-0 md:self-center">
 
-            <div className="w-full py-[112px] "> 
-
-                <div className="h-[599px] gap-[30px] "> 
-
-                  <div className="flex w-full items-center justify-between"> 
-
-                    <div className="flex flex-col w-[509px] gap-[30px] font-['Montserrat']">
-
-                        <h4 className="font-normal text-[20px] leading-[30px] tracking-[0.2px] w-[154px] h-[30px]">SUMMER 2020</h4>
-                        <h1 className="font-bold text-[58px] leading-[80px] tracking-[0.2px] w-[509px] h-[160px]">Vita Classic Product</h1>
-                        <p className="font- normal text-[14px] leading-[20px] tracking-[0.2px] w-[341px] h-[40px]">We know how large objects will act, We know how are objects will act, We know</p>
-                        <div className="gap-[34px] flex flex-row">
-                            <h3 className="font-bold text-[24px] leading-[32px] tracking-[0.1px] w-[77px] h-[32px]">$16.48</h3>
-                            <button className="bg-[#2DC071] py-[15px] px-[40px] rounded-[5px] gap-[10px] font-bold text-[14px] leading-[22px] tracking-[0.2px]">ADD TO CART</button>
+                        <h4 className="font-normal text-[20px] leading-[30px] tracking-[0.2px] ">SUMMER 2020</h4>
+                        <h1 className="font-bold md:text-[58px] text-[40px] md:leading-[80px] leading-tight tracking-[0.2px] ">Vita Classic Product</h1>
+                        <p className="font-normal text-[14px] leading-[20px] tracking-[0.2px] max-w-[341px]">We know how large objects will act, We know how are objects will act, We know</p>
+                        <div className="gap-[34px] flex md:flex-row flex-col items-center mt-4 md:mt-0">
+                            <h3 className="font-bold text-[24px] leading-[32px] tracking-[0.1px]">$16.48</h3>
+                            <button className="bg-[#2DC071] py-[15px] px-[40px] rounded-[5px] font-bold text-[14px] leading-[22px] tracking-[0.2px] hover:bg-green-600 trnsition-colors">ADD TO CART</button>
                         </div>
-                    </div>
+            </div>
 
-                        <div className="w-[510px] h-[685px]">
+                        <div className="relative md:max-w-[510px] w-full max-w-[400px]">
                         <img
                         src={vitaImage}
-                        alt="Model"
+                        alt="Vita Classic Model"
                         className="w-full h-full object-contain"
                         />
                         
@@ -446,88 +243,130 @@ export default function ShopPage(){
 
                    </div>   
 
-                </div>
+              
 
+            <div className="hidden md:flex absolute bottom-[48px] left-1/2 -translate-x-1/2 gap-[2px] z-20">
+              <div className="w-[62px] h-[10px] bg-white"></div>
+              <div className="w-[62px] h-[10px] bg-white opacity-50"></div>
             </div>
 
-
-          </div>
-
-          <div className="absolute bottom-[48px] left-1/2 -translate-x-1/2 flex gap-[2px]">
-  
-                       <div className="w-[62px] h-[10px] bg-white opacity-100"></div>
-  
-                       <div className="w-[62px] h-[10px] bg-white opacity-50"></div>
-                    </div>
-
-                    <button className="absolute left-[30px] top-1/2 -translate-y-1/2 text-white text-[48px] font-light">❮</button>
-                    <button className="absolute right-[30px] top-1/2 -translate-y-1/2 text-white text-[48px] font-light">❯</button>
+                <button className="absolute left-4 md:left-[30px] top-1/2 -translate-y-1/2 text-white text-[40px] md:text-[48px] font-light hover:scale-110 transition-transform z-30">❮</button>
+                <button className="absolute right-4 md:right-[30px] top-1/2 -translate-y-1/2 text-white text-[40px] md:text-[48px] font-light hover:scale-110 transition-transform z-30">❯</button>
 
         </section>
+            )
+        }
 
-        
+       
+
+    const NeuralUniverse = () => {
+    return (
         <section className="bg-white w-full min-h-[682px] flex justify-center overflow-hidden">
 
-            <div className="flex flex-row items-center justify-between gap-[10px] w-full max-w-[1439px] px-4">
-                <div className="relative w-[704px] h-[682px] overflow-hidden  shrink-0 ml-[100px]">
+            <div className="flex md:flex-row flex-col-reverse items-center justify-between md:gap-[10px] gap-[30px] w-full max-w-[1439px] px-4 md:px-0">
+                
+                <div className="relative w-full md:w-[704px] md:h-[682px] h-[300px] overflow-hidden  shrink-0 ml-0 md:ml-[100px]">
                 <img
                 src={neuralImage}
                 alt="Neural Universe Couple"
-                className="absolute max-w-[725px] w-full h-[774px] object-cover bottom-0 left-[-137px]"
+                className="relative md:absolute md:max-w-[725px] w-full h-full md:h-[774px] object-cover bottom-0 left-0 md:left-[-137px]"
                 />
                 </div> 
 
-                <div className="flex flex-col font-['Montserrat'] w-[537px] gap-[30px] ml-[30px]">
-                    <h5 className="w-[122px] h-[24px] w-full font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">SUMMER 2020</h5>
-                    <h2 className="w-[375px] h-[100px] w-full font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">Part of the Neural Universe</h2>
-                    <h4 className="max-w-[376px] h-[60px] w-full font-normal text-[20px] leading-[30px] tracking-[0.2px] text-[#737373]">We know how large objects will act, but things all a small scale.</h4>
-                    <div className="flex flex-row gap-[10px]">
-                        <button className="bg-[#2DC071] py-[15px] px-[40px] rounded-[5px] gap-[10px] font-bold text-[14px] leading-[22px] tracking-[0.2px] text-white">BUY NOW</button>
-                        <button className="bg-white border border-[#2DC071] py-[15px] px-[40px] rounded-[5px] gap-[10px] font-bold text-[14px] leading-[22px] tracking-[0.2px] text-[#2DC071]">READ MORE</button>
+                <div className="flex flex-col md:w-[537px] w-full gap-[30px] ml-0 md:ml-[30px] items-center md:text-left py-10 md:py-0" >
+                    <h5 className="w-full font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">SUMMER 2020</h5>
+                    <h2 className="max-w-[375px] w-full font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">Part of the Neural Universe</h2>
+                    <h4 className="max-w-[376px]  w-full font-normal text-[20px] leading-[30px] tracking-[0.2px] text-[#737373]">We know how large objects will act, but things all a small scale.</h4>
+                    <div className="flex sm:flex-row flex-col gap-[10px]">
+                        <button className="md:bg-[#2DC071] bg-[#23A6F0] py-[15px] px-[40px] rounded-[5px]  font-bold text-[14px] leading-[22px] tracking-[0.2px] text-white">BUY NOW</button>
+                        <button className="bg-white border md:border-[#2DC071] border-[#23A6F0] py-[15px] px-[40px] rounded-[5px] font-bold text-[14px] leading-[22px] tracking-[0.2px] md:text-[#2DC071] text-[#23A6F0]">
+                            <span className="md:hidden">Learn More</span>
+                            <span className="hidden md:inline">READ MORE</span>
+                        </button>
 
                     </div>
                 </div>
 
             </div>
         </section>
+  )
+}
 
+         
+        const FeaturedPosts = ()=> {
+            const posts=[
+                {
+                    id:1,
+                    desktopImg: postImage1,
+                    mobileImg: postImage4,
+                    title:"Loudest à la Madison #1 (L'integral)",
+                    desc:"We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+                    date:"22 April 2021",
+                    comments:"10 comments"
+                },
+                {
+                    id:1,
+                    desktopImg: postImage2,
+                    mobileImg: postImage5,
+                    title:"Loudest à la Madison #1 (L'integral)",
+                    desc:"We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+                    date:"22 April 2021",
+                    comments:"10 comments"   
+                },
+                {
+                    id:1,
+                    desktopImg: postImage3,
+                    mobileImg: postImage6,
+                    title:"Loudest à la Madison #1 (L'integral)",
+                    desc:"We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+                    date:"22 April 2021",
+                    comments:"10 comments"  
+                },
+            ]
 
-
+        return (
         <section className="w-full bg-white">
-            <div className="flex flex-col max-w-[1050px] mx-auto py-[112px] gap-[80px] items-center text-center font-['Montserrat']"> 
+
+            <div className="flex flex-col max-w-[1050px] mx-auto md:py-[112px] px-4 md:px-0 md:gap-[80px] gap-[60px] items-center"> 
                
-               <div className="flex flex-col items-center gap-[10px] text-center max-w-[691px] w-full"> 
+               <div className="flex flex-col items-center gap-[10px] text-center max-w-[691px]"> 
                    <h6 className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#23A6F0]">Practice Advice</h6>
                    <h3 className="font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">Featured Posts</h3>
-                   <p className="max-w-[469px] font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373]">Problems trying to resolve the conflict between <br className="hidden md:block" />
-                   the two major realms of Classical physics: Newtonian mechanics</p>
-                   
-               </div>
+                   <p className="font-normal text-[14px] leading-[20px] tracking-[0.2px] text-[#737373] md:max-w-[469px]">Problems trying to resolve the conflict between <br className="hidden md:block" />
+                   the two major realms of Classical physics: Newtonian mechanics
+                   </p>
+                </div>
 
-            <div className="flex flex-row gap-[10px] justify-center w-full">
-      
-               <div className="flex flex-col w-[348px] min-h-[606px] bg-white shadow-[0_2px_4px_0_rgba(0,0,0,0.10)]"> 
-                  <div className="relative w-full h-[300px] overflow-hidden shrink-0">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[10px] gap-[30px] w-full">
+
+               {posts.map((post) => (
+               <div key={post.id} className="flex flex-col  bg-white shadow-[0_2px_4px_0_rgba(0,0,0,0.10)] group hover:shadow-lg duration-300"> 
+                <div className="relative w-full h-[300px] overflow-hidden">
                      <img 
-                       src={postImage1}
-                       alt="Post 1" 
-                       className="w-full h-full object-cover"
+                       src={post.mobileImg}
+                       alt={post.title} 
+                       className="w-full h-full object-cover block md:hidden"
                      />
 
-                     <div className="absolute top-[20px] left-[20px] bg-[#E74C3C] text-white px-[10px] py-[0px] rounded-[3px] shadow-[0_2px_4px_rgba(0,0,0,0.1)] font-bold text-[14px] leading-[24px]">NEW</div>
+                     <img 
+                       src={post.desktopImg}
+                       alt={post.title} 
+                       className="w-full h-full object-cover hidden md:block"
+                     />
 
-                  </div>
+                     <div className="absolute top-[20px] left-[20px] bg-[#E74C3C] text-white px-[10px] rounded-[3px] shadow-[0_2px_4px_rgba(0,0,0,0.1)] font-bold text-[14px] leading-[24px] tracking-[0.2px]">NEW</div>
+                </div>
 
-                  <div className="flex flex-col gap-[10px] px-[25px] pt-[25px] pb-[35px] items-start text-left">
+                <div className="flex flex-col gap-[10px] px-[25px] pt-[25px] pb-[35px]">
                     <div className="flex gap-[15px] text-[12px] font-normal leading-[16px] tracking-[0.2px]">
-                        <small className="text-[#8EC2F2]">Google</small>
-                        <small className="text-[#737373]">Trending</small>
-                        <small className="text-[#737373]">New</small>
+                        <small className="text-[#8EC2F2] cursor-pointer hover:text-[#252B42]">Google</small>
+                        <small className="text-[#737373] cursor-pointer hover:text-[#252B42]">Trending</small>
+                        <small className="text-[#737373] cursor-pointer hover:text-[#252B42]">New</small>
                     </div>
 
-                    <h4 className="text-[#252B42] text-[20px] leading-[30px] tracking-[0.2px] font-normal">Loudest à la Madison #1 (L'integral)</h4>
+                    <h4 className="text-[#252B42] text-[20px] leading-[30px] tracking-[0.2px] font-normal">{post.title}</h4>
 
-                    <p className="className=text-[#737373] text-[14px] leading-[20px] tracking-[0.2px]">We focus on ergonomics and meeting you where you work. It's only a<br className="hidden md:block" />keystroke away.</p>
+                    <p className="text-[#737373] text-[14px] leading-[20px] tracking-[0.2px] max-w-[300px]">{post.desc}</p>
 
                     <div className="flex flex-row justify-between items-center w-full py-[15px]">
                         <div className="flex items-center gap-[5px] text-[12px] leading-[16px] text-[#737373]">
@@ -537,19 +376,19 @@ export default function ShopPage(){
                                viewBox="0 0 24 24" 
                                fill="none" 
                                stroke="currentColor" 
-                               stroke-width="2" 
-                               stroke-linecap="round" 
-                               stroke-linejoin="round" 
+                               strokeWidth="2" 
+                               strokeLinecap="round" 
+                               strokeLinejoin="round" 
                                class="ai ai-Clock"
                                className="text-[#23A6F0]"
                                >
                                 <circle cx="12" cy="12" r="10"/>
                                <path d="M15 16l-2.414-2.414A2 2 0 0 1 12 12.172V6"/>
                                </svg>
-                          <span>22 April 2021</span>
+                          <span>{post.date}</span>
                         </div>
 
-                        <div className="flex items-center gap-[5px] text-[12px] leading-[16px] text-[#737373]">
+                        <div className="flex items-center gap-[5px] text-[12px] text-[#737373]">
                           <svg xmlns="http://www.w3.org/2000/svg" 
                                viewBox="0 0 1024 1024" 
                                width="16" height="14.67" 
@@ -558,7 +397,7 @@ export default function ShopPage(){
     
                                <path  d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8m-616-64h536c4.4 0 8-3.6 8-8V284c0-7.2-8.7-10.7-13.7-5.7L592 488.6l-125.4-124a8.03 8.03 0 0 0-11.3 0l-189 189.6a7.87 7.87 0 0 0-2.3 5.6V720c0 4.4 3.6 8 8 8"/>
                           </svg>
-                          <span>10 comments</span>
+                          <span>{post.comments}</span>
                         </div>
 
                         
@@ -583,184 +422,27 @@ export default function ShopPage(){
                             </svg>
 
                         </div>
+                    </div>    
 
                   </div>
-
+                ))}
                </div>
-
-
-               <div className="flex flex-col w-[348px] min-h-[606px] bg-white shadow-[0_2px_4px_0_rgba(0,0,0,0.10)]"> 
-                  <div className="relative w-full h-[300px] overflow-hidden shrink-0">
-                     <img 
-                       src={postImage2}
-                       alt="Post 2" 
-                       className="w-full h-full object-cover"
-                     />
-
-                     <div className="absolute top-[20px] left-[20px] bg-[#E74C3C] text-white px-[10px] py-[0px] rounded-[3px] shadow-[0_2px_4px_rgba(0,0,0,0.1)] font-bold text-[14px] leading-[24px]">NEW</div>
-
-                  </div>
-
-                  <div className="flex flex-col gap-[10px] px-[25px] pt-[25px] pb-[35px] items-start text-left">
-                    <div className="flex gap-[15px] text-[12px] font-normal leading-[16px] tracking-[0.2px]">
-                        <small className="text-[#8EC2F2]">Google</small>
-                        <small className="text-[#737373]">Trending</small>
-                        <small className="text-[#737373]">New</small>
-                    </div>
-
-                    <h4 className="text-[#252B42] text-[20px] leading-[30px] tracking-[0.2px] font-normal">Loudest à la Madison #1 (L'integral)</h4>
-
-                    <p className="className=text-[#737373] text-[14px] leading-[20px] tracking-[0.2px]">We focus on ergonomics and meeting you where you work. It's only a<br className="hidden md:block" />keystroke away.</p>
-
-                    <div className="flex flex-row justify-between items-center w-full py-[15px]">
-                        <div className="flex items-center gap-[5px] text-[12px] leading-[16px] text-[#737373]">
-                          <svg xmlns="http://www.w3.org/2000/svg" 
-                               width="16" 
-                               height="16" 
-                               viewBox="0 0 24 24" 
-                               fill="none" 
-                               stroke="currentColor" 
-                               stroke-width="2" 
-                               stroke-linecap="round" 
-                               stroke-linejoin="round" 
-                               class="ai ai-Clock"
-                               className="text-[#23A6F0]"
-                               >
-                                <circle cx="12" cy="12" r="10"/>
-                               <path d="M15 16l-2.414-2.414A2 2 0 0 1 12 12.172V6"/>
-                               </svg>
-                          <span>22 April 2021</span>
-                        </div>
-
-                        <div className="flex items-center gap-[5px] text-[12px] leading-[16px] text-[#737373]">
-                          <svg xmlns="http://www.w3.org/2000/svg" 
-                               viewBox="0 0 1024 1024" 
-                               width="16" height="14.67" 
-                               fill="#23856D" 
-                               style={{ opacity: 1 }}>
-    
-                               <path  d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8m-616-64h536c4.4 0 8-3.6 8-8V284c0-7.2-8.7-10.7-13.7-5.7L592 488.6l-125.4-124a8.03 8.03 0 0 0-11.3 0l-189 189.6a7.87 7.87 0 0 0-2.3 5.6V720c0 4.4 3.6 8 8 8"/>
-                          </svg>
-                          <span>10 comments</span>
-                        </div>
-
-                        
-                    </div>
-                    <div className="flex items-center gap-[10px] cursor-pointer group">
-                            <span className="text-[#737373] font-bold text-[14px] leading-[24px]">Learn More</span>
-                            <svg 
-                             xmlns="http://www.w3.org/2000/svg" 
-                             width="9" 
-                             height="16" 
-                             viewBox="0 0 9 16" 
-                             fill="none"
-                             className="text-[#23A6F0]" 
-                            >
-                            <path 
-                             d="M1 1L8 8L1 15" 
-                             stroke="currentColor" 
-                             strokeWidth="2" 
-                             strokeLinecap="round" 
-                             strokeLinejoin="round"
-                            />
-                            </svg>
-
-                        </div>
-
-                  </div>
-
-               </div>
-
-
-               <div className="flex flex-col w-[348px] min-h-[606px] bg-white shadow-[0_2px_4px_0_rgba(0,0,0,0.10)]"> 
-                  <div className="relative w-full h-[300px] overflow-hidden shrink-0">
-                     <img 
-                       src={postImage3}
-                       alt="Post 3" 
-                       className="w-full h-full object-cover"
-                     />
-
-                     <div className="absolute top-[20px] left-[20px] bg-[#E74C3C] text-white px-[10px] py-[0px] rounded-[3px] shadow-[0_2px_4px_rgba(0,0,0,0.1)] font-bold text-[14px] leading-[24px]">NEW</div>
-
-                  </div>
-
-                  <div className="flex flex-col gap-[10px] px-[25px] pt-[25px] pb-[35px] items-start text-left">
-                    <div className="flex gap-[15px] text-[12px] font-normal leading-[16px] tracking-[0.2px]">
-                        <small className="text-[#8EC2F2]">Google</small>
-                        <small className="text-[#737373]">Trending</small>
-                        <small className="text-[#737373]">New</small>
-                    </div>
-
-                    <h4 className="text-[#252B42] text-[20px] leading-[30px] tracking-[0.2px] font-normal">Loudest à la Madison #1 (L'integral)</h4>
-
-                    <p className="className=text-[#737373] text-[14px] leading-[20px] tracking-[0.2px]">We focus on ergonomics and meeting you where you work. It's only a<br className="hidden md:block" />keystroke away.</p>
-
-                    <div className="flex flex-row justify-between items-center w-full py-[15px]">
-                        <div className="flex items-center gap-[5px] text-[12px] leading-[16px] text-[#737373]">
-                          <svg xmlns="http://www.w3.org/2000/svg" 
-                               width="16" 
-                               height="16" 
-                               viewBox="0 0 24 24" 
-                               fill="none" 
-                               stroke="currentColor" 
-                               stroke-width="2" 
-                               stroke-linecap="round" 
-                               stroke-linejoin="round" 
-                               class="ai ai-Clock"
-                               className="text-[#23A6F0]"
-                               >
-                                <circle cx="12" cy="12" r="10"/>
-                               <path d="M15 16l-2.414-2.414A2 2 0 0 1 12 12.172V6"/>
-                               </svg>
-                          <span>22 April 2021</span>
-                        </div>
-
-                        <div className="flex items-center gap-[5px] text-[12px] leading-[16px] text-[#737373]">
-                          <svg xmlns="http://www.w3.org/2000/svg" 
-                               viewBox="0 0 1024 1024" 
-                               width="16" height="14.67" 
-                               fill="#23856D" 
-                               style={{ opacity: 1 }}>
-    
-                               <path  d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8m-616-64h536c4.4 0 8-3.6 8-8V284c0-7.2-8.7-10.7-13.7-5.7L592 488.6l-125.4-124a8.03 8.03 0 0 0-11.3 0l-189 189.6a7.87 7.87 0 0 0-2.3 5.6V720c0 4.4 3.6 8 8 8"/>
-                          </svg>
-                          <span>10 comments</span>
-                        </div>
-
-                        
-                    </div>
-                    <div className="flex items-center gap-[10px] cursor-pointer group">
-                            <span className="text-[#737373] font-bold text-[14px] leading-[24px]">Learn More</span>
-                            <svg 
-                             xmlns="http://www.w3.org/2000/svg" 
-                             width="9" 
-                             height="16" 
-                             viewBox="0 0 9 16" 
-                             fill="none"
-                             className="text-[#23A6F0]" 
-                            >
-                            <path 
-                             d="M1 1L8 8L1 15" 
-                             stroke="currentColor" 
-                             strokeWidth="2" 
-                             strokeLinecap="round" 
-                             strokeLinejoin="round"
-                            />
-                            </svg>
-
-                        </div>
-
-                  </div>
-
-               </div>
-
-                 
-
-            </div> 
-
-            </div> 
+             </div>               
         </section>
+            )
+        }
+
+        export default function ShopPage(){
+    return (
+     <div className="w-full font-['Montserrat'] min-h-screen overflow-x-hidden">
+        <Hero />
+        <EditorsPick />
+        <BestsellerProducts /> 
+        <VitaClassic />
+        <NeuralUniverse />
+        <FeaturedPosts />
      </div>
+
     )
 } 
 
