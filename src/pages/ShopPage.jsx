@@ -432,7 +432,7 @@ import { Link } from 'react-router-dom';
             )
         }
 
-        export default function ShopPage(){
+    export default function ShopPage(){
     return (
      <div className="w-full font-['Montserrat'] min-h-screen overflow-x-hidden">
         <Hero />

@@ -15,8 +15,14 @@ function App() {
 
       <main>
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
+          
+          <Route exact path="/" element={<ShopPage />} /> 
+          
+          
           <Route path="/shop" element={<ShopPage/>}/>
+          
+          
+          <Route path="/home" element={<HomePage />} />
         </Routes>
       </main>
       
