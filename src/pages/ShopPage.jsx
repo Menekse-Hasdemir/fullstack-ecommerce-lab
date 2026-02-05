@@ -261,7 +261,7 @@ import { Link } from 'react-router-dom';
 
     const NeuralUniverse = () => {
     return (
-        <section className="bg-white w-full min-h-[682px] flex justify-center overflow-hidden">
+        <section className="bg-white w-full min-h-[682px] flex justify-center overflow-hidden text-center items-center ">
 
             <div className="flex md:flex-row flex-col-reverse items-center justify-between md:gap-[10px] gap-[30px] w-full max-w-[1439px] px-4 md:px-0">
                 
@@ -273,7 +273,7 @@ import { Link } from 'react-router-dom';
                 />
                 </div> 
 
-                <div className="flex flex-col md:w-[537px] w-full gap-[30px] ml-0 md:ml-[30px] items-center md:text-left py-10 md:py-0" >
+                <div className="flex flex-col md:w-[537px] w-full gap-[30px] ml-0 md:ml-[30px] items-center text-center md:text-start md:text-left py-10 md:py-0 md:mr-[130px]">
                     <h5 className="w-full font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">SUMMER 2020</h5>
                     <h2 className="max-w-[375px] w-full font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">Part of the Neural Universe</h2>
                     <h4 className="max-w-[376px]  w-full font-normal text-[20px] leading-[30px] tracking-[0.2px] text-[#737373]">We know how large objects will act, but things all a small scale.</h4>
@@ -325,7 +325,7 @@ import { Link } from 'react-router-dom';
             ]
 
         return (
-        <section className="w-full bg-white">
+        <section className="w-full bg-white py-[80px]">
 
             <div className="flex flex-col max-w-[1050px] mx-auto md:py-[112px] px-4 md:px-0 md:gap-[80px] gap-[60px] items-center"> 
                
