@@ -153,14 +153,14 @@ import { Link } from 'react-router-dom';
 
         const BestsellerProducts = () => {
           const products=[
-            {id:1, img:bestImage1, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:2, img:bestImage2, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:3, img:bestImage3, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:4, img:bestImage4, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:5, img:bestImage5, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:6, img:bestImage6, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:7, img:bestImage7, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
-            {id:8, img:bestImage8, title:"Graphic Design", department:"English Department", oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:1, img:bestImage1, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:2, img:bestImage2, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:3, img:bestImage3, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:4, img:bestImage4, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:5, img:bestImage5, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:6, img:bestImage6, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:7, img:bestImage7, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
+            {id:8, img:bestImage8, title:"Graphic Design",  oldPrice:"$16.48",newPrice:"$6.48"},
           ]  
         return (
         <section className="w-full bg-white ">
@@ -177,20 +177,20 @@ import { Link } from 'react-router-dom';
             <div key={product.id} className="flex flex-col items-center">
               
               
-              <div className="w-full md:w-[239px] h-[427px] overflow-hidden">
+              <Link to={`/shop/${product.id}`} className="w-full md:w-[239px] h-[427px] overflow-hidden">
                 <img
                   src={product.img}
                   alt={product.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
-              </div>
+              </Link>
 
               
               <div className="flex flex-col items-center pt-[25px] pb-[35px] px-[25px] gap-[10px] text-center">
                 <h5 className="font-bold text-[16px] text-[#252B42]">{product.title}</h5>
-                <Link to="/shop" className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">
+                <p className="font-bold text-[14px] leading-[24px] tracking-[0.2px] text-[#737373] hover:text-[#23A6F0]">
                   {product.dept}
-                </Link>
+                </p>
                 
                 <div className="flex gap-[5px] py-[5px]">
                   <span className="font-bold text-[16px] leading-[24px] tracking-[0.1px] text-[#BDBDBD]">{product.oldPrice}</span>
@@ -305,7 +305,7 @@ import { Link } from 'react-router-dom';
                     comments:"10 comments"
                 },
                 {
-                    id:1,
+                    id:2,
                     desktopImg: postImage2,
                     mobileImg: postImage5,
                     title:"Loudest à la Madison #1 (L'integral)",
@@ -314,7 +314,7 @@ import { Link } from 'react-router-dom';
                     comments:"10 comments"   
                 },
                 {
-                    id:1,
+                    id:3,
                     desktopImg: postImage3,
                     mobileImg: postImage6,
                     title:"Loudest à la Madison #1 (L'integral)",
@@ -379,7 +379,7 @@ import { Link } from 'react-router-dom';
                                strokeWidth="2" 
                                strokeLinecap="round" 
                                strokeLinejoin="round" 
-                               class="ai ai-Clock"
+                               className="ai ai-Clock"
                                className="text-[#23A6F0]"
                                >
                                 <circle cx="12" cy="12" r="10"/>
