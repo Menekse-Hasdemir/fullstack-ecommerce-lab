@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import PageContent from "./layout/PageContent";
 import ShopPage from './pages/ShopPage';
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ContactPage from "./pages/ContactPage";
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -26,6 +27,8 @@ function App() {
           <Route path="/home" element={<HomePage />} />
 
           <Route path="/shop/:productId" element={<ProductDetailPage/>}/>
+
+          <Route path="/contact" element={<ContactPage/>}/>
 
         </Routes>
       </main>
