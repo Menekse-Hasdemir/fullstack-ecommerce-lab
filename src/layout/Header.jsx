@@ -35,7 +35,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-[15px] font-bold text-[14px] text-[#737373]">
             <Link to="/">Home</Link>
             <Link to="/shop" className="flex items-center gap-1">Shop <ChevronDown size={14}/></Link>
-            <Link to="/about">About</Link>
+            <Link to="/team">About</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact</Link>
           </div>
@@ -77,6 +77,7 @@ export default function Header() {
                 <Link to="/product" onClick={() => setIsMenuOpen(false)}>Product</Link>
                 <Link to="/pricing" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                <Link to="/team" onClick={() => setIsMenuOpen(false)}>About</Link>
             </div>
           </div>
         )}

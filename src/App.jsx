@@ -6,6 +6,7 @@ import PageContent from "./layout/PageContent";
 import ShopPage from './pages/ShopPage';
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ContactPage from "./pages/ContactPage";
+import TeamPage from "./pages/TeamPage";
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -29,6 +30,8 @@ function App() {
           <Route path="/shop/:productId" element={<ProductDetailPage/>}/>
 
           <Route path="/contact" element={<ContactPage/>}/>
+
+          <Route path="/team" element={<TeamPage/>}/>
 
         </Routes>
       </main>
