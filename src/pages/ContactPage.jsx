@@ -3,6 +3,8 @@ import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import questionsImage from '../assets/86715b0002656e5e55f527a50fe8ae2bc1e70550.jpg';
 import heroBg from '../assets/shop-hero-1-product-slide-1.jpg';
 import growImage from '../assets/7bc2f9fb559eeb7e6b92ed49f40128729a9f74f1.jpg';
+import GrowSection1 from '../components/GrowSection';
+
  const HeroSection =()=>{
     return(
         <section>
@@ -110,25 +112,7 @@ import growImage from '../assets/7bc2f9fb559eeb7e6b92ed49f40128729a9f74f1.jpg';
 
     const GrowSection=()=>{
         return(
-            <section className="[w-full]">
-            <div className="flex flex-row ">
-             <div className="bg-[#23A6F0] flex items-center pl-[60px] pr-[250px] py-[80px]">
-               <div className="text-white md:w-[438px] pl-[50px] flex flex-col gap-[24px] ">
-               <h5 className="font-bold text-[16px]">WORK WITH US</h5>
-               <h2 className="font-bold text-[40px]">Now Let’s grow Yours</h2>
-               <p className="font-normal text-[14px]">The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th</p>
-               <button className="font-normal text-[14px] rounded-[5px] px-[40px] py-[15px] border-[1px] border-[#FAFAFA] hover:bg-white hover:text-[#23A6F0] transition-colors w-fit">Contact Us</button>
-               </div>
-             </div>   
-             <div className="hidden md:block">
-               <img
-                src={growImage}
-                alt="Work With Us"
-                className="w-full h-full  object-cover"
-                />
-             </div>
-            </div>
-            </section>
+            <GrowSection1 image={growImage}/>
         )
     }
 

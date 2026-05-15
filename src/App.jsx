@@ -6,7 +6,8 @@ import PageContent from "./layout/PageContent";
 import ShopPage from './pages/ShopPage';
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ContactPage from "./pages/ContactPage";
-import TeamPage from "./pages/TeamPage";
+import TeamPage from "./components/TeamPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -32,6 +33,10 @@ function App() {
           <Route path="/contact" element={<ContactPage/>}/>
 
           <Route path="/team" element={<TeamPage/>}/>
+
+          <Route path="/about" element={<AboutUsPage/>}/>
+
+
 
         </Routes>
       </main>
