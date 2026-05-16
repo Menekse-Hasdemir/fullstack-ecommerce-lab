@@ -75,10 +75,11 @@ export default function Header() {
           <div className="absolute top-[78px] left-0 w-full bg-white py-12 md:hidden  shadow-2xl">
             <div className="flex flex-col items-center gap-8 text-[#737373] text-[30px] font-normal leading-[45px]">
                 <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                <Link to="/product" onClick={() => setIsMenuOpen(false)}>Product</Link>
-                <Link to="/pricing" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                <Link to="/shop" onClick={() => setIsMenuOpen(false)}>Shop</Link>
                 <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+                <Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                <Link to="/pages" onClick={() => setIsMenuOpen(false)}>Pages</Link>
             </div>
           </div>
         )}
